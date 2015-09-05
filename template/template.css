@@ -65,3 +65,30 @@ dt{
 	padding: 1em;
 	color: #B3B3B3;
 }
+#bfooter{
+	background-color: #1A1A1A;
+	color: dimgray;
+	font-size: 0.75em;
+}
+#bf-left{
+	display: inline-block;
+}
+#bf-left:hover{
+	color: dimgray;
+}
+#bf-right{
+	float: right;
+}
+#sidebar{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 20%;
+	background-color: black;
+	margin-left: -20%;
+	color: white;
+}
+#side-menu{
+	margin: auto 2em auto 2em;
+	/* Doesn't work */
+}
