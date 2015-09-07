@@ -20,6 +20,9 @@ footer{
 	padding-top: 1.1em;
 	color: gray;
 }
+.navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{
+	background-color: #008cba;
+}
 
 /* Centers copyright text when screen size is xs */
 @media (max-width: 767px) {
