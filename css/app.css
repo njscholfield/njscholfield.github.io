@@ -21,6 +21,10 @@ footer{
 	color: gray;
 }
 
+.btn{
+	margin-top: 0.5em;
+}
+
 /* Centers copyright text when screen size is xs */
 @media (max-width: 767px) {
     #copyright{
