@@ -1,6 +1,5 @@
 body{
 	margin-top: 50px;
-	margin-bottom: 0;
 }
 html {
   position: relative;
@@ -8,17 +7,11 @@ html {
   margin-bottom: 0;
 }
 footer{
-	width: 100%;
-	
-	
 	margin-top: 1em;
 }
-.fcontent{
-	text-align: center;
-}
 #copyright{
-	padding-top: 1.1em;
-	color: gray;
+	padding-top: 0.8em;
+	color: white;
 }
 /* Fix for weird half-boxes highlighting while hovering over footer links */
 .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{
