@@ -20,6 +20,7 @@ footer{
 	padding-top: 1.1em;
 	color: gray;
 }
+/* Fix for weird half-boxes highlighting while hovering over footer links */
 .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{
 	background-color: #008cba;
 }
