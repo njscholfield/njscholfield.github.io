@@ -1,6 +1,7 @@
 .pictures{
 	height: 13em;
 	border-radius: 15px;
+	margin: 1em;
 }
 #built-with{
 	text-align: center;
