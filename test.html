@@ -1,6 +1,6 @@
 ---
 permalink: /test/
-title: Noah Scholfield | Test
+title: Test
 ---
 
 <!DOCTYPE html>
@@ -25,11 +25,7 @@ title: Noah Scholfield | Test
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="/js/bootstrap.min.js"></script>
   <script>
-    switch({{page.title}}){
-      case "Noah Scholfield | Test":
-        $("#test").addClass("active");
-      break;
-    }
+    $("#{{page.title}}").addClass("active");
   </script>
   </body>
 </html>
