@@ -43,9 +43,9 @@ title: test
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="/js/bootstrap.min.js"></script>
   <script>
-    var pathname = "#a" + window.location.pathname;
+    var pathname = window.location.pathname;
     pathname = pathname.toString();
-    $(pathname).addClass("active");
+    $(document.getElementById(pathname)).addClass("active");
   </script>
   </body>
 </html>
