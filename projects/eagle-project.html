@@ -1,0 +1,32 @@
+---
+title: Eagle Project
+permalink: /projects/eagle-project/
+---
+<!DOCTYPE html>
+  <html lang="en">
+
+    {% include head.html %}
+
+    <body>
+
+      {% include navbar.html %}
+
+        <div class="container">
+          <div class="jumbotron">
+            <h1>Eagle Project</h1>
+          </div>
+          <iframe width="526" height="352" frameborder="0" src="http://files.slidemypics.com/app/js/iframe.html?bg_color=1f1f1f&amp;hash=526b25d5e19e0ef56fb7b0e5a1292127&amp;r=0.25770468660630286" class="center"></iframe>
+          <a class="btn btn-primary" href="https://www.flickr.com/photos/103580394@N04/sets/72157635984432836/">Pictures</a>
+          <a class="btn btn-primary" href="https://docs.google.com/document/d/1h3FAtFvRSLmB4lO4x2TdW7u2oXSgWWyDdc2KDLZCsVY/edit?usp=sharing">Transcriptions</a>
+        </div>
+
+      {% include footer.html %}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="/js/bootstrap.min.js"></script>
+      <script>
+        $("#{{page.title}}").addClass("active");
+      </script>
+    </body>
+  </html>
