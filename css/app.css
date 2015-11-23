@@ -6,6 +6,9 @@ html {
   min-height: 100%;
   margin-bottom: 0;
 }
+article{
+	margin-bottom: 1.5em;
+}
 .jumbotron{
     margin-bottom: 0;
 }
@@ -23,5 +26,5 @@ html {
 @media (max-width: 767px) {
     #copyright{
         text-align: center;
-    } 
+    }
 }
