@@ -17,19 +17,6 @@ iframe {
 .jumbotron{
     margin-bottom: 0;
 }
-.intrinsic-container {
-  position: relative;
-  height: 0;
-  overflow: hidden;
-	padding-bottom: 75%;
-}
-.intrinsic-container iframe {
-  position: absolute;
-  top:0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-}
 #copyright{
 	padding-top: 0.8em;
 	color: white;
