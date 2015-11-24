@@ -11,9 +11,7 @@ article{
 	margin-top: 1.5em;
 }
 iframe {
-	display: block;
-	margin: 0 auto !important;
-	max-width: 100%;
+	border: 0;
 }
 .jumbotron{
     margin-bottom: 0;
