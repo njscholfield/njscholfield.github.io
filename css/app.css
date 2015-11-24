@@ -12,9 +12,9 @@ article{
 .jumbotron{
     margin-bottom: 0;
 }
-iframe>.flickr-embed-frame {
+iframe {
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 #copyright{
 	padding-top: 0.8em;
