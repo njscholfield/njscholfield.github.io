@@ -12,7 +12,7 @@ article{
 .jumbotron{
     margin-bottom: 0;
 }
-.flickr-embed-frame {
+iframe>.flickr-embed-frame {
 	display: block;
 	margin: 0, auto;
 }
