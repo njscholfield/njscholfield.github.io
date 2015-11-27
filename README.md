@@ -1,4 +1,4 @@
 # njscholfield.github.io
-Noah Scholfield
+This is the GitHub repository for my personal website.
 
-Can I just edit this or do I have to use a branch?
+My website can be found at https://noahscholfield.com, http://noahscholfield.me or http://noahscholfield.xyz
