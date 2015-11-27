@@ -13,12 +13,25 @@ article{
 iframe {
 	border: 0;
 }
+
 .jumbotron{
     margin-bottom: 0;
 }
+.pictures{
+  height: 13em;
+	border-radius: 15px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 #copyright{
 	padding-top: 0.8em;
 	color: white;
+}
+#built-with-1{
+	background-color: lightgray;
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 /* Fix for weird half-boxes highlighting while hovering over footer links */
