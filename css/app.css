@@ -52,7 +52,7 @@ iframe {
 /* Centers copyright text when screen size is xs */
 @media (max-width: 767px) {
 		.wrapper {
-			margin-bottom: -5.9em;
+			margin-bottom: -5.6em;
 		}
 		.push {
 			height: 6em;
