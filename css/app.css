@@ -51,7 +51,13 @@ iframe {
 
 /* Centers copyright text when screen size is xs */
 @media (max-width: 767px) {
-    #copyright{
+		.wrapper {
+			margin-bottom: -5.9em;
+		}
+		.push {
+			height: 6em;
+		}
+		#copyright{
         text-align: center;
     }
 }
