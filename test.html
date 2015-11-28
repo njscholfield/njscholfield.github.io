@@ -6,20 +6,22 @@ title: Test
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+  <div class="wrapper">
+    {% include head.html %}
 
-  <body>
+    <body>
 
-    {% include navbar.html %}
+      {% include navbar.html %}
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Test</h1>
-        <p>The header and footer on this page were added using Jekyll</p>
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Test</h1>
+          <p>The header and footer on this page were added using Jekyll</p>
+        </div>
       </div>
-    </div>
-
-    {% include footer.html %}
+      <div class="push"></div>
+  </div>
+      {% include footer.html %}
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
