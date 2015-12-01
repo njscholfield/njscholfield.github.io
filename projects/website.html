@@ -1,0 +1,38 @@
+---
+title: Website
+permalink: /projects/website/
+---
+<!DOCTYPE html>
+  <html lang="en">
+
+  {% include head.html %}
+
+    <body>
+
+      {% include navbar.html %}
+
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Website</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <article>
+          <a class="btn-link" href="#bootstrap">Bootstrap</a>
+          <a class="btn-link" href="#cloudflare">Cloudflare</a>
+        </article>
+        <article id="bootstrap">
+          <h2>Bootstrap</h2>
+          <a class="btn-link" href="https://getbootstrap.com"><span class="glyphicon glyphicon-link"></span> getbootstrap.com</a>
+        </article>
+        <article id="cloudflare">
+          <h2>Cloudflare</h2>
+          <a class="btn-link" href="https://cloudflare.com"><span class="glyphicon glyphicon-link"></span> cloudflare.com</a>
+        </article>
+      </div>
+
+      {% include footer.html % }
+
+    </body>
+  </html>
