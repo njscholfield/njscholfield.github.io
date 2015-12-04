@@ -18,7 +18,7 @@ permalink: /projects/eagle-project/
       </div>
         <div class="container">
           <div style='position: relative; padding-bottom: 76%; height: 0; overflow: hidden;'>
-
+            <div class="gTest"></div>
           </div>
             <br>
           <article>
@@ -30,6 +30,10 @@ permalink: /projects/eagle-project/
         </div>
 
       {% include footer.html %}
-
+      <script src="/js/galleria-1.4.2.min.js"></script>
+      <script src="/js/galleria.flickr.min.js"></script>
+      <script>
+        if (Galleria) { $(".gTest").text('Galleria works') }
+      </script>
     </body>
   </html>
