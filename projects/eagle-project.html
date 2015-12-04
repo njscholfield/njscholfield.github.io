@@ -18,7 +18,11 @@ permalink: /projects/eagle-project/
       </div>
         <div class="container">
           <div style='position: relative; padding-bottom: 76%; height: 0; overflow: hidden;'>
-            <div class="gTest"></div>
+            <div class="galleria" style="width: 100%; height: 100%;">
+              <img src="/img/code.png">
+              <img src="/img/github-logo.png">
+              <img src="/img/pitt.png">
+            </div>
           </div>
             <br>
           <article>
@@ -30,10 +34,11 @@ permalink: /projects/eagle-project/
         </div>
 
       {% include footer.html %}
-      <script src="/js/galleria-1.4.2.min.js"></script>
-      <script src="/js/galleria.flickr.min.js"></script>
+      <script src="/js/galleria/galleria-1.4.2.min.js"></script>
+      <script src="/js/galleria/plugins/flickr/galleria.flickr.min.js"></script>
       <script>
-        if (Galleria) { $(".gTest").text('Galleria works') }
+        Galleria.loadTheme('js/galleria/themes/classic/galleria.classic.min.js');
+        Galleria.run('.galleria');
       </script>
     </body>
   </html>
