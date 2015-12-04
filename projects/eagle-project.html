@@ -17,13 +17,11 @@ permalink: /projects/eagle-project/
         </div>
       </div>
         <div class="container">
-          <div style='position: relative; padding-bottom: 76%; height: 0; overflow: hidden;'>
-            <div class="galleria center col-xs-12" style="height: 100%; width: 100%;">
+            <div class="galleria center col-xs-12">
               <img src="/img/code.png">
               <img src="/img/github-logo.png">
               <img src="/img/pitt.png">
             </div>
-          </div>
             <br>
           <article>
             <p>Had to remove the slideshow because it included a hidden ad. Until I create a new one, you can look at the pictures directly by clicking the picture button below.</p>
@@ -38,7 +36,9 @@ permalink: /projects/eagle-project/
       <script src="/js/galleria/flickr/galleria.flickr.min.js"></script>
       <script>
         Galleria.loadTheme('/js/galleria/classic/galleria.classic.min.js');
-        Galleria.run('.galleria');
+        Galleria.run('.galleria', {
+          height: 0.75
+        });
       </script>
     </body>
   </html>
