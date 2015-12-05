@@ -13,10 +13,7 @@ iframe {
 }
 
 .hidden-link {
-	display: none;
-}
-.hidden-link: hover {
-	display: inline;
+	color: white;
 }
 .jumbotron {
     margin-bottom: 0;
