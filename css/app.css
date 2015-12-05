@@ -12,6 +12,12 @@ iframe {
 	border: 0;
 }
 
+.hidden-link {
+	display: none;
+}
+.hidden-link: hover {
+	display: inline;
+}
 .jumbotron {
     margin-bottom: 0;
 }
