@@ -31,6 +31,13 @@ permalink: /contact/
     		<button type="button" class="close" onclick="$('#failure').addClass('hidden');">×</button>
     		<p><span class="glyphicon glyphicon-exclamation-sign"></span>  Error submitting form! Try again</p></div>
 
+      <noscript>
+        <div class="alert alert-dismissible alert-warning">
+          <button type="button" class="close" data-dismiss="alert">&close;</button>
+          <p><span class=""></span> You don't seem to have JavaScript enabled. The form may act strangely and you will have no way of knowing if it successfully submitted unless you enable JavaScript.</p>
+        </div>
+      </noscript>
+
     	<form action="https://docs.google.com/forms/d/1TqUYtC2s8Uv5ChXPEqMGm1GZTyGNn0Wto2Mb2biIMHE/formResponse" method="POST"
     	target="bs-iframe" onsubmit="confirm()" class="container" id="contact-form">
 
