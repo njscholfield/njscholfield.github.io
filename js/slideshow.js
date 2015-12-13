@@ -1,4 +1,4 @@
-setTimeout(function() {
+function loadGalleria() {
   Galleria.loadTheme('/js/galleria/classic/galleria.classic.min.js');
   Galleria.run('#testGalleria', {
     height: 0.75,
@@ -11,4 +11,15 @@ setTimeout(function() {
       description: true
     }
   });
-}, 1500);
+}
+
+function waitForElement(){
+    if(typeof Galleria !== "undefined"){
+        loadGalleria();
+    }
+    else{
+        setTimeout(function(){
+            waitForElement();
+        },250);
+    }
+}
