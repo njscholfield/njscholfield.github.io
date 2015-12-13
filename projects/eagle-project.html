@@ -21,7 +21,7 @@ permalink: /projects/eagle-project/
         <noscript>
           <h2 class="text-center">Please enable JavaScript to view the slideshow</h2>
         </noscript>
-        <div id="galleria"></div>
+        <div class="galleria"></div>
           <br>
         <article>
           <p>The slideshow above only shows the first 100 pictures of the cemetery. To see the rest of the 600+ photos, click the "Pictures" button below. If you want to read all of the transcriptions from the stones you can click the "Transcriptions" button. You can also see the transcriptions in the slideshow above by clicking the "i" in the top left corner.</p>
@@ -35,20 +35,7 @@ permalink: /projects/eagle-project/
       <!--Galleria (slideshow) JS-->
       <script src="/js/galleria/galleria-1.4.2.min.js"></script>
       <script src="/js/galleria/flickr/galleria.flickr.min.js"></script>
-      <script>
-        Galleria.loadTheme('/js/galleria/classic/galleria.classic.min.js');
-        Galleria.run('#galleria', {
-          height:0.75,
-          autoplay: true,
-          thumbnails: false,
-          showCounter: false,
-          flickr: 'set:72157635984432836',
-          flickrOptions: {
-            max: 100,
-            description: true
-          }
-        });
-      </script>
+      <script src="/js/slideshow.js"></script>
 
     </body>
   </html>
