@@ -11,4 +11,4 @@ setTimeout(function() {
       description: true
     }
   });
-}, 5000);
+}, 1500);
