@@ -1,6 +1,8 @@
 (function waitForElement(){
     if(typeof Galleria !== "undefined"){
+      if(ratioShouldWork == true){
         loadGalleria();
+      }
     }else{
         setTimeout(function() { waitForElement(); }, 250);
     }
