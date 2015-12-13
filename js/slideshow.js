@@ -1,3 +1,11 @@
+(function waitForElement(){
+    if(typeof Galleria !== "undefined"){
+        loadGalleria();
+    }else{
+        setTimeout(function() { waitForElement(); }, 250);
+    }
+})()
+
 function loadGalleria() {
   Galleria.loadTheme('/js/galleria/classic/galleria.classic.min.js');
   Galleria.run('#testGalleria', {
@@ -11,15 +19,4 @@ function loadGalleria() {
       description: true
     }
   });
-}
-
-function waitForElement(){
-    if(typeof Galleria !== "undefined"){
-        loadGalleria();
-    }
-    else{
-        setTimeout(function(){
-            waitForElement();
-        },250);
-    }
 }
