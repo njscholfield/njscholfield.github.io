@@ -1,8 +1,7 @@
 .centered-content {
-  width: 100%;
   text-align: center;
   color: white;
-  margin-top: 50%;
+  padding-top: 25%;
 }
 .wrapper {
   background: url("/img/home.jpg") #43ac6a;
