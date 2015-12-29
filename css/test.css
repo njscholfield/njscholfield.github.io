@@ -1,5 +1,4 @@
-.full-picture {
-  width: 100%;
-  height: 100%;
-  background-color: green;
+.wrapper {
+  background-image: url("/img/home.png");
+  background-image: image("/img/home.webp", "/img/home.png");
 }
