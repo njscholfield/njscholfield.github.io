@@ -1,17 +1,18 @@
 body {
   padding-top: 0;
 }
-nav {
-  background-color: none;
-}
+
 .centered-content {
   text-align: center;
   color: white;
   margin: auto;
 }
+.navbar {
+  background-color: transparent;
+}
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  background-color: none;
+  background-color: transparent;
   text-decoration: underline;
 }
 .wrapper {
