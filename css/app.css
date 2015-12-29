@@ -45,7 +45,7 @@ html {
 
 /* Fix for weird half-boxes highlighting while hovering over footer links */
 .nav>li>a:hover,.nav>li>a:focus {
-    background-color: #008cba;
+    background-color: inherit;
 }
 
 /* Centers copyright text when screen size is xs */
