@@ -10,6 +10,10 @@ body {
 .navbar {
   background-color: transparent;
 }
+.navbar-inverse {
+  background-color: #111111;
+  border-color: #010101;
+}
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   background-color: transparent;
