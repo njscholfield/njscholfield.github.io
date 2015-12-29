@@ -2,6 +2,10 @@ body {
   padding-top: 0;
 }
 
+.active {
+  background-color: transparent;
+  text-decoration: underline;
+}
 .centered-content {
   text-align: center;
   color: white;
