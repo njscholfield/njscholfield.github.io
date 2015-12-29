@@ -1,11 +1,12 @@
 .centered-content {
   text-align: center;
   color: white;
-  padding-top: 25%;
+  margin: auto;
 }
 .wrapper {
   background: url("/img/home.jpg") #43ac6a;
   background-image: image("/img/home.webp", "/img/home.jpg", #43ac6a);
   background-size: cover;
   margin: 0;
+  display: flex;
 }
