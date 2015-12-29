@@ -1,7 +1,18 @@
+body {
+  padding-top: 0;
+}
+nav {
+  background-color: none;
+}
 .centered-content {
   text-align: center;
   color: white;
   margin: auto;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: none;
+  text-decoration: underline;
 }
 .wrapper {
   background: url("/img/home.jpg") #43ac6a;
