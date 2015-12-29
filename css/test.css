@@ -1,6 +1,6 @@
 .wrapper {
-  background: url("/img/home.png") #43ac6a;
-  background-image: image("/img/home.webp", "/img/home.png", #43ac6a);
+  background: url("/img/home.jpg") #43ac6a;
+  background-image: image("/img/home.webp", "/img/home.jpg", #43ac6a);
   background-size: cover;
   margin: 0;
 }
