@@ -16,6 +16,9 @@ body {
 .navbar {
   background-color: transparent;
 }
+.navbar-collapse {
+  background-color: rgba(22, 22, 22, 0.5);
+}
 .navbar-inverse {
   background-color: #111111;
   border-color: #010101;
