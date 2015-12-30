@@ -39,5 +39,7 @@ body {
   background-image: image("/img/home.webp", "/img/home.jpg", #43ac6a);
   background-size: cover;
   margin: 0;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
 }
