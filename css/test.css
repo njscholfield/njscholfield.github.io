@@ -9,16 +9,15 @@ body {
 .centered-content {
   text-align: center;
   color: white;
-  padding: 0 2em 1em 2em;
+  padding: 0;
+  padding-bottom: 1em;
+  width: 100%;
   background-color: rgba(22, 22, 22, 0.6);
-  border-radius: 3px;
   position: absolute;
   top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 .navbar {
   background-color: transparent;
