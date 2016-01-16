@@ -5,25 +5,19 @@ permalink: /
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+    {% include head.html %}
+    <link href="/css/home.css" rel="stylesheet">
+    <body>
 
-  <body>
+      {% include navbar.html %}
 
-    {% include navbar.html %}
-
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Home</h1>
-        <p>Welcome to my personal website!</p>
+      <div class="centered-content jumbotron">
+        <div class="container">
+          <h1>Welcome!</h1>
+          <p>Learn about me and see some projects that I have worked on</p>
+        </div>
       </div>
-    </div>
 
-    <div class="container">
-      <br>
-      <p>On this website I have some information about myself, contact information, projects I have worked on and maybe some other stuff.</p>
-    </div>
-
-    {% include footer.html %}
-
+      {% include footer.html %}
   </body>
 </html>
