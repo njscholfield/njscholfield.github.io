@@ -1,0 +1,62 @@
+body {
+	padding-top: 3em;
+	height: 100%
+}
+html {
+  height: 100%;
+}
+
+.hidden-link {
+	color: white;
+}
+.jumbotron {
+    margin-bottom: 0;
+}
+.pictures {
+  height: 13em;
+	border-radius: 15px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.galleria-stage {
+	bottom: 10px !important;
+}
+
+/* Sticky Footer (http://ryanfait.com/html5-sticky-footer/) */
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -2.9em;
+}
+.push {
+	height: 2.9em;
+}
+
+#copyright {
+	padding-top: 0.8em;
+	color: white;
+}
+#built-with-1 {
+	background-color: lightgray;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+/* Fix for weird half-boxes highlighting while hovering over footer links */
+.nav>li>a:hover,.nav>li>a:focus {
+    background-color: inherit;
+}
+
+/* Centers copyright text when screen size is xs */
+@media (max-width: 767px) {
+		.wrapper {
+			margin-bottom: -5.6em;
+		}
+		.push {
+			height: 5.6em;
+		}
+		#copyright{
+        text-align: center;
+    }
+}
