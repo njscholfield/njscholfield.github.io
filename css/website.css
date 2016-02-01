@@ -1,6 +1,12 @@
 a {
   color: inherit;
 }
+
 a:hover {
   color: inherit;
+}
+
+h2 {
+  padding-top: 1.5em;
+  margin-top: -0.9em;
 }
