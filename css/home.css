@@ -4,7 +4,6 @@ body {
 
 .navbar-default .navbar-nav > .active > a {
   background-color: transparent;
-  color: #999999;
 }
 .centered-content {
   text-align: center;
