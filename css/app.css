@@ -5,7 +5,10 @@ body {
 html {
   height: 100%;
 }
-
+.code {
+	font-size: 10em;
+	color: #43ac6a;
+}
 .jumbotron {
     margin-bottom: 0;
 }
