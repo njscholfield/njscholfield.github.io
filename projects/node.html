@@ -5,7 +5,11 @@ permalink: /projects/node/
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+  <head>
+
+    {% include head.html %}
+
+  </head>
 
   <body>
 
@@ -14,20 +18,28 @@ permalink: /projects/node/
     <div class="jumbotron">
       <div class="container">
         <h1>Node</h1>
-        <p>These are some demo apps that I built with <a href="https://nodejs.org" target="_blank">Node.js</a> hosted on <a href="https://heroku.com" target="_blank">Heroku</a>.</p>
+        <p>These are some demo apps that I built with <a href="https://nodejs.org" target="_blank">Node.js</a> and
+          hosted on <a href="https://heroku.com" target="_blank">Heroku</a>.</p>
       </div>
     </div>
     <div class="container">
       <article>
         <h2>Login Demo</h2>
-          <p>This is an app that I made which allows for account registration, login, password change, and account deletion. It doesn't really have any practical uses, but I learned a lot about Express.js, MongoDB, Bcrypt, and sessions in Express.</p>
+          <p>I wanted to make a sample web app with authentication so I created this demo. So far this application allows for account registration, login, password change, and account deletion. It doesn't really have any practical uses, but I learned a lot about Express.js, MongoDB, Bcrypt, and sessions in Express.</p>
         <a class="btn btn-primary" href="https://login.noahscholfield.com" target="_blank">View Project</a>
         <a class="btn btn-default" href="https://github.com/njscholfield/login-demo" target="_blank"><span class="icon icon-github"></span> View Code</a>
       </article>
         <br>
       <article>
+        <h2>FHIR Demo</h2>
+        <p>This is a demo app that accesses demo patient records from the <a href="http://fhir.cerner.com" target="_blank">Cerner FHIR API</a> using a test <abbr title="Electronic Medical Records">EMR</abbr> database supplied by Cerner for development. I wanted to try using a RESTful API to make something somewhat interesting so I make this demo. Using this app you can enter a patient number and pick the type of information you would like to see about that patient. Not all of the categories have any results for all patients so it might be hard to find something interesting.</p>
+        <a class="btn btn-primary" href="https://fhir.noahscholfield.com" target="_blank">View Project</a>
+        <a class="btn btn-default" href="https://github.com/njscholfield/fhir-demo" target="_blank"><span class="icon icon-github"></span> View Code</a>
+      </article>
+        <br>
+      <article>
         <h2>Form Demo</h2>
-          <p>This is a pretty simple app that just using a form to input data, store it in a database, and show the data that has been submitted to the database on another page.</p>
+          <p>This is a pretty simple app that just uses a form to input data, stores it in a PostgreSQL database, and displays that data another page. This is one of the first apps I made using Node and was also one of the first apps I made that incorperated a database.</p>
         <a class="btn btn-primary" href="https://form.noahscholfield.com" target="_blank">View Project</a>
         <a class="btn btn-default" href="https://github.com/njscholfield/form-demo" target="_blank"><span class="icon icon-github"></span> View Code</a>
       </article>
