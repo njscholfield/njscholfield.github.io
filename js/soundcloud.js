@@ -7,12 +7,9 @@ app.controller("descriptionController", ["$http", function($http) {
   sc.showJSON = false
   sc.submit = function() {
     var callURL = scapi + sc.url + client
-    console.log(callURL)
     $http.get(callURL)
       .success(function(response) {
-        console.log(response)
         sc.trackJSON = response
-        console.log(sc.trackJSON)
       })
       .error(function(response) {
         console.log(response)
