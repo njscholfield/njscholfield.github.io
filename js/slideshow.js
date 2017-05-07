@@ -1,4 +1,4 @@
-Galleria.loadTheme('/js/galleria/classic/galleria.classic.min.js');
+Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.6/themes/classic/galleria.classic.min.js');
 Galleria.run('.galleria', {
   height: 0.75,
   autoplay: true,
