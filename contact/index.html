@@ -8,7 +8,13 @@ permalink: /contact/
   <head>
 
     {% include head.html %}
-
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <style>
+      .red-border {
+        border: 3px solid red;
+        width: 310px;
+      }
+    </style>
   </head>
 
   <body>
@@ -54,6 +60,9 @@ permalink: /contact/
     				<textarea name="entry.142010775" rows="8" cols="0" class="form-control" id="message" aria-label="Message"
     				aria-required="true" required></textarea>
     			</div>
+          <div class="form-group">
+            <div class="g-recaptcha" data-callback="recaptcha" data-expired-callback="recaptcha" data-sitekey="6LevGz0UAAAAAOdoi9r2-Gum1LtNgUcKApi0GnkT"></div>
+          </div>
     			<div class="form-group">
             <noscript>
               <style>.form-control, #submitBtn { pointer-events: none; cursor: not-allowed; }</style>
