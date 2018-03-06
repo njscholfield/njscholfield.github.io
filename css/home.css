@@ -33,7 +33,7 @@
     font-size: 3.5rem;
   }
 }
-.col-sm-10 {
+.col-sm {
   display: flex;
   align-items: center;
   min-height: 11em;
