@@ -4,26 +4,31 @@ permalink: /
 ---
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-
-      {% include head.html %}
-
-      <link href="/css/home.css" rel="stylesheet">
-
-    </head>
-    
-    <body>
-
-      {% include navbar.html %}
-
-      <div class="centered-content jumbotron">
-        <div class="container">
-          <h1>Welcome!</h1>
-          <p>Learn about me and see some projects that I have worked on</p>
-        </div>
+<head>
+  {% include head.html %}
+  <link href="/css/home.css" rel="stylesheet">
+</head>
+<body>
+  {% include navbar.html %}
+  <div class="display-image">
+    <div class="centered-content jumbotron">
+      <div class="container">
+        <h1>Welcome!</h1>
+        <p>Learn about me and see some projects that I have worked on</p>
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <p class="display-text">Want to see my most recent projects? Check out my <a href="/projects/">projects</a> page or my <a href="https://github.com/njscholfield/" target="_blank" rel="noopener noreferrer">GitHub</a> account</p>
+      </div>
+      <div class="col-sm-2">
+        <span class="icon icon-code display-icon"></span>
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
 
-      {% include footer.html %}
-  </body>
 </html>
