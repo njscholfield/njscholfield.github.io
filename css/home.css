@@ -9,7 +9,7 @@
 }
 .display-image {
   height: 70vh;
-  background: url("/img/citylights.jpg") #43ac6a;
+  background: url("/img/citylights.jpg") black;
   background-size: cover;
   background-position: center;
   margin: 0;
