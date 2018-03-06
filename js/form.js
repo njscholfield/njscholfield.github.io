@@ -12,8 +12,8 @@ function recaptcha(token) {
 }
 
 function showBanner(banner) {
-  setTimeout(() => banner.classList.remove('hidden'), 500);
-  setTimeout(() => banner.classList.add('hidden'), 3000);
+  setTimeout(() => banner.classList.remove('d-none'), 500);
+  setTimeout(() => banner.classList.add('d-none'), 3000);
 }
 
 function sendResponse(e) {
