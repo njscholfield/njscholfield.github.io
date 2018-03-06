@@ -1,21 +1,17 @@
   <div class="push"></div> <!-- Sticky Footer -->
 </div> <!-- This closes the .wrapper div for the Sticky Footer -->
-<footer class="navbar-inverse">
+<footer class="navbar-dark bg-primary">
   <div class="container">
-  <div class="row">
-    <div class="right col-sm-6 col-sm-push-6">
-      <ul class="nav navbar-right list-unstyled">
-        <li class="col-xs-6 btn-link"><a class="btn-link text-center fcontent" href="/contact/">Contact&nbspMe</a></li>
-        <li class="col-xs-6 btn-link"><a class="btn-link text-center fcontent" href="/projects/website/">Built&nbspWith</a></li>
-      </ul>
+    <div class="d-flex justify-content-between flex-column flex-sm-row navbar-collapse">
+      <div class="order-sm-2">
+        <ul class="nav navbar-nav flex-row">
+          <li class="nav-item"><a class="nav-link" href="/contact/">Contact&nbspMe</a></li>
+          <li class="nav-item"><a class="nav-link" href="/projects/website/">Built&nbspWith</a></li>
+        </ul>
+      </div>
+      <div class="order-sm-1"><p id="copyright">Copyright © 2018 Noah Scholfield</p></div>
     </div>
-    <div class="left col-sm-6 col-sm-pull-6"><p id="copyright">Copyright © 2018 Noah Scholfield</p></div>
-  </div>
   </div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script>
-  $("#{{page.title}}").addClass("active");
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha256-5+02zu5UULQkO7w1GIr6vftCgMfFdZcAHeDtFnKZsBs=" crossorigin="anonymous"></script>
