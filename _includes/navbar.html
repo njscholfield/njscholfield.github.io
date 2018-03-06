@@ -1,26 +1,19 @@
 <div class="wrapper"> <!-- Sticky Footer -->
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Noah Scholfield</a>
-        </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li id="Home"><a href="/">Home</a></li>
-          <li id="Contact"><a href="/contact/">Contact Me</a></li>
-          <li id="Projects"><a href="/projects/">Projects</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="mailto:contact@noahscholfield.com" title="Send me an email"><span class="icon icon-envelope"></span><noscript>Email</noscript></a></li>
-          <li><a href="https://www.linkedin.com/in/noahscholfield" target="_blank" title="Check out my LinkedIn profile"><span class="icon icon-linkedin"></span><noscript>LinkedIn</noscript></a></li>
-          <li><a href="https://github.com/njscholfield" target="_blank" title="Check out my work on GitHub"><span class="icon icon-github"></span><noscript>GitHub</noscript></a></li>
-        </ul>
-      </div>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+    <a class="navbar-brand" href="/">Noah Scholfield</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar" class="navbar-collapse collapse justify-content-between">
+      <ul class="nav navbar-nav">
+        <li id="Home" class="nav-item {% if page.title == 'Home' %}active{% endif %}"><a class="nav-link" href="/">Home</a></li>
+        <li id="Contact" class="nav-item {% if page.title == 'Contact' %}active{% endif %}"><a class="nav-link" href="/contact/">Contact Me</a></li>
+        <li id="Projects" class="nav-item {% if page.title == 'Projects' %}active{% endif %}"><a class="nav-link" href="/projects/">Projects</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="mailto:contact@noahscholfield.com" title="Send me an email"><span class="fas fa-envelope"></span><noscript>Email</noscript></a></li>
+        <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/noahscholfield" target="_blank" title="Check out my LinkedIn profile"><span class="fab fa-linkedin-in"></span><noscript>LinkedIn</noscript></a></li>
+        <li class="na-item"><a class="nav-link" href="https://github.com/njscholfield" target="_blank" title="Check out my work on GitHub"><span class="fab fa-github"></span><noscript>GitHub</noscript></a></li>
+      </ul>
     </div>
   </nav>
