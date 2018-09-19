@@ -9,7 +9,14 @@ html {
 
 .jumbotron {
   padding: 4rem 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
+  background-color: white;
+}
+.jumbotron h1.display-4 {
+  font-weight: bold;
+}
+h2 {
+  font-weight: 400;
 }
 
 /* Sticky Footer (http://ryanfait.com/html5-sticky-footer/) */
