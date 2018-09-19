@@ -17,6 +17,10 @@
   align-items: center;
   justify-content: center;
 }
+.jumbotron h1.display-3 {
+  font-weight: 400;
+  text-shadow: none;
+}
 .display-text {
   font-size: 1.5rem;
   font-weight: 300;
