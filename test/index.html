@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donation Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/yeti/bootstrap.min.css" integrity="sha256-W2ya1Ygm18l60afsKnKMJEJDN/LjR4hn1kK3ngv/J4o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://noahscholfield.com/css/app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js" integrity="sha256-3kjowa0CUPPK4W+yaGpNP1exjs8gbX2SSsToEMd06K8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Donation Form</h1>
+      </div>
+    </div>
+    <div id="vue-app" class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Quantity</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in submissionData">
+            <td>{{ item.category }}</td>
+            <td>{{ item.item }}</td>
+            <td>{{ item.quantity }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary" @click="toggleForm">+ Add an item</button>
+      
+      <form @submit.prevent="submit" v-show="showForm">
+        <div class="form-group">
+          <label>Category</label>
+          <select class="form-control" name="category" v-model="formData.category" required>
+            <option value="">Select a category...</option>
+            <option>Cat 1</option>
+            <option>Cat 2</option>
+            <option>Cat 3</option>
+            <option>Cat 4</option>
+            <option>Cat 5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Item</label>
+          <select class="form-control" name="item" v-model="formData.item" required>
+            <option value="" selected>Select a item...</option>
+            <option>Item 1</option>
+            <option>Item 2</option>
+            <option>Item 3</option>
+            <option>Item 4</option>
+            <option>Item 5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quanitity</label>
+          <input class="form-control" type="number" min="1" max="20" v-model="formData.quantity" required>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success" type="submit">Add</button>
+        </div>
+      </form>
+      <!-- <pre><code>{{ submissionData }}</code></pre> -->
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
