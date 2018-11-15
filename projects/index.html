@@ -6,6 +6,12 @@ permalink: /projects/
 <html lang="en">
   <head>
     {% include head.html %}
+    <style>
+      h2 {
+        padding-top: 2em;
+        margin-top: -2em;
+      }
+    </style>
   </head>
   <body>
     {% include navbar.html %}
@@ -25,7 +31,7 @@ permalink: /projects/
       </article>
         <br>
       <article>
-        <h2>TSD Autofill</h2>
+        <h2 id="tsdauto">TSD Autofill</h2>
           <p>This is a Chrome extension I created to make the creation and filling out of support tickets faster and easier for student technical consultants at the University of Pittsburgh. While working as a student tech con I found that making support tickets was a very repetitive process with many of the fields being the same for most tickets created. This extension fills these fields with the most common values with 1 click and also makes searching for a person by their username a 1 click process instead of 4.</p>
           <p>While initially, I created this extension to make my own job easier, it is now used by most of my coworkers and I even adapted it so that workers at the 24/7 help desk can use it to make their job easier as well. Over the summer I added a feature to make <em>New Computer Setup</em> tickets much faster to make because we set up many computers over the first few weeks of the semester for new students. I am also considering allowing users to make their own macros or customize the built-in ones to really speed up ticket making and make it more customizable.</p>
           <p><em>While anyone can download the extension via the link below, it will only activate and work when logged into the system Pitt uses for support tickets (Salesforce). Feel free to check out the code though.</em></p>
@@ -34,7 +40,7 @@ permalink: /projects/
       </article>
         <br>
       <article>
-        <h2>Pitt Secular Alliance Website</h2>
+        <h2 id="ssa">Pitt Secular Alliance Website</h2>
         <p>I am currently the outreach coordinator for Pitt Secular Allinace and as part of my responsibilites, I created a website for the club. It has some basic information about our club, a list of upcoming events that automatically updates from our Google Calendar, and some ways to contact us for more information.</p>
         <a class="btn btn-primary" href="https://secularpitt.club" target="_blank">See Project</a>
         <a class="btn btn-success" href="https://github.com/secularpitt/secularpitt.github.io" target="_blank" rel="noreferrer noopener"><span class="fab fa-github"></span> View Code</a>
