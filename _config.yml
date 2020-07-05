@@ -1,3 +1,5 @@
 url: https://noahscholfield.com
 plugins:
   - jekyll-sitemap
+sass:
+  style: compressed

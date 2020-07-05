@@ -1,44 +1,6 @@
-.centered-content {
-  text-align: center;
-  color: white;
-  background-color: transparent;
-  text-shadow: black 1px 1px;
-}
-.bg-dark {
-  background-color: black !important;
-}
-.display-image {
-  height: 70vh;
-  background: url("/img/citylights.jpg") black;
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.jumbotron h1.display-3 {
-  font-weight: 400;
-  text-shadow: none;
-}
-.display-text {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-.display-icon {
-  font-size: 10rem;
-  color: var(--green);
-}
-@media (max-width: 576px) {
-  .display-icon {
-    font-size: 8rem;
-  }
-  .display-3 {
-    font-size: 3.5rem;
-  }
-}
-.col-sm {
-  display: flex;
-  align-items: center;
-  min-height: 11em;
-}
+---
+---
+{% capture style %}
+{% include css/home.css %}
+{% endcapture %}
+{{ style | scssify }}
