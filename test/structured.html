@@ -1,0 +1,379 @@
+---
+title: Structured
+permalink: /structured
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donation Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.3/yeti/bootstrap.min.css" integrity="sha256-W2ya1Ygm18l60afsKnKMJEJDN/LjR4hn1kK3ngv/J4o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://noahscholfield.com/css/app.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.js" integrity="sha256-3kjowa0CUPPK4W+yaGpNP1exjs8gbX2SSsToEMd06K8=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-4">Donation Form</h1>
+      </div>
+    </div>
+    <div id="vue-app" class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Item</th>
+            <th>Quantity</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in submissionData">
+            <td>{{ item.category }}</td>
+            <td>{{ item.item }}</td>
+            <td>{{ item.quantity }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary" @click="toggleForm">+ Add an item</button>
+
+      <form @submit.prevent="submit" v-show="showForm">
+        <div class="form-group">
+          <label>Category</label>
+          <select class="form-control" name="category" v-model="formData.category" required>
+            <option value="">Select a category...</option>
+            <option>Cat 1</option>
+            <option>Cat 2</option>
+            <option>Cat 3</option>
+            <option>Cat 4</option>
+            <option>Cat 5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Item</label>
+          <select class="form-control" name="item" v-model="formData.item" required>
+            <option value="" selected>Select a item...</option>
+            <option>Item 1</option>
+            <option>Item 2</option>
+            <option>Item 3</option>
+            <option>Item 4</option>
+            <option>Item 5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Quanitity</label>
+          <input class="form-control" type="number" min="1" max="20" v-model="formData.quantity" required>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success" type="submit">Add</button>
+        </div>
+      </form>
+      <!-- <pre><code>{{ submissionData }}</code></pre> -->
+    </div>
+    <script src="form.js"></script>
+    <!-- test junk -->
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.matthewsvu.com/#Organization",
+    "url": "https://www.matthewsvu.com",
+    "name": "Matthews-Vu Medical Group",
+    "logo": "https://storage.googleapis.com/treatspace-prod-media/logo/p-1972/logo_None_cIOGFP0.png",
+"image": "https://storage.googleapis.com/treatspace-prod-media/logo/p-1972/logo_None_cIOGFP0.png",
+"telephone": "+1 (719) 632-4455",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4190 E. Woodmen Road, Suite 100",
+        "addressLocality": "Colorado Springs",
+        "addressRegion": "CO",
+        "postalCode": "80920",
+        "addressCountry": "United States"
+    },
+    "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+1 (719) 632-4455",
+        "contactType": "customer service"
+    }],
+    "sameAs" : [
+
+        "https://www.facebook.com/MatthewsVuWoodmen/",
+
+        "https://treatspace.com/practice/matthews-vu/resources/review-us-on-google"
+
+    ],
+    "member": [
+
+            {
+                "@type": "Person",
+                "name": "Jenna Oropeza, PA"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Ryan Candee, PA-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Charles Hornbaker, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Michele Coleman, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Mark Rowe, DO"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Larry Gold, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Dominique Dijkhuizen, MSW, LCSW"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Sean Smith, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Adam Robinson, DO"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Valerie Beck, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Jessica Brandon, PA-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Stephanie Chon, RN, CPNP"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Rachel Couch, NP"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Theresa Henley, FNP-BC"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Paul Houge, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Travis Kotter, DPM"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Randal Kumm, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Jose Mantilla-Acevedo, NP-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Shabnum Matthews-Vu, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Bao Nguyen, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Melissa Powell, LPC"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Sheldon Ravin, DO"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Kent Roberson, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Jill Saylor, NP"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Michael Shank, DO"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Joanne Vogel, FNP"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Paul Edwards, PA-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Susan Stewart, NP-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Alex Bustamante, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Benjamin Sturgeon, MS"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Timothy Coleman, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Molly Goss, PA-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Susan Swayne, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Susie Cump, PA-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Anneliese Hale, PA-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Megan DeCenzo, PA-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Andrew Sedillo, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Richard Vu, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Lorie Warren, FNP-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Rachel Wilkenson, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Brian Zable, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Shara Wolfe, FNP-C"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Alicia Apple, DO"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Amy Kammerzell, NP"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Jason Kalan, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Susan Matthews, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Kristin McCoy, MD"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Lisa Reed, LCSW"
+            },
+
+            {
+                "@type": "Person",
+                "name": "Brena Branch, NP"
+            }
+
+    ],
+    "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.matthewsvu.com/appointment_request",
+            "inLanguage": "en-US",
+            "actionPlatform": [
+                "http://schema.org/DesktopWebPlatform",
+                "http://schema.org/IOSPlatform",
+                "http://schema.org/AndroidPlatform"
+            ]
+        },
+        "result": {
+            "@type": "Reservation",
+            "name":"Request Appointment"
+        }
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.883116883116883",
+        "ratingCount": "77"
+    }
+}
+</script>
+  </body>
+</html>
