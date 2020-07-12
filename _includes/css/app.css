@@ -88,3 +88,45 @@ footer .nav-item {
     box-shadow: 0 0 1px;
   }
 }
+
+/* Redesigned mobile navbar */
+.grid-navbar {
+  display: grid !important;
+  grid-template-columns: max-content 1fr max-content;
+  width: 100%;
+}
+
+.grid-navbar ul.nav.navbar-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-navbar #links {
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.grid-navbar .navbar-dark .navbar-nav .nav-link {
+  margin-right: .5rem;
+}
+
+@media(max-width: 576px) {
+  body {
+    padding-top: 5.7rem;
+  }
+  .grid-navbar {
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content min-content;
+  }
+  .grid-navbar #links {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+  .grid-navbar #socials {
+    justify-content: flex-end;
+  }
+  .navbar-dark .grid-navbar .navbar-nav .nav-link {
+    margin-right: 1rem;
+  }
+}

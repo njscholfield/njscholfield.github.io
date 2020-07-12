@@ -1,20 +1,17 @@
 <div class="wrapper"> <!-- Sticky Footer -->
   <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
-    <a class="navbar-brand" href="/" aria-label="Link to home page">Noah Scholfield</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbar" class="navbar-collapse collapse justify-content-between">
-      <ul class="nav navbar-nav">
+    <div id="navbar" class="grid-navbar">
+      <a class="navbar-brand" href="/" aria-label="Link to home page">Noah Scholfield</a>
+      <ul class="nav navbar-nav" id="links">
         <li id="Home" class="nav-item {% if page.title == 'Home' %}active{% endif %}"><a class="nav-link" href="/">Home</a></li>
-        <li id="Contact" class="nav-item {% if page.title == 'Contact' %}active{% endif %}"><a class="nav-link" href="/contact/">Contact Me</a></li>
+        <li id="Contact" class="nav-item {% if page.title == 'Contact' %}active{% endif %}"><a class="nav-link" href="/contact/">Contact&nbsp;Me</a></li>
         <li id="Experience" class="nav-item {% if page.title == 'Experience' %}active{% endif %}"><a class="nav-link" href="/experience/">Experience</a></li>
         <li id="Projects" class="nav-item {% if page.title == 'Projects' %}active{% endif %}"><a class="nav-link" href="/projects/">Projects</a></li>
       </ul>
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" id="socials">
         <li class="nav-item"><a class="nav-link" href="mailto:contact@noahscholfield.com" title="Send me an email"><span class="fas fa-envelope"></span></a></li>
         <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/noahscholfield" target="_blank" rel="noopener noreferrer" title="Check out my LinkedIn profile"><span class="fab fa-linkedin-in"></span></a></li>
-        <li class="na-item"><a class="nav-link" href="https://github.com/njscholfield" target="_blank" rel="noopener noreferrer" title="Check out my work on GitHub"><span class="fab fa-github"></span></a></li>
+        <li class="nav-item"><a class="nav-link"  style="margin-right: 0;" href="https://github.com/njscholfield" target="_blank" rel="noopener noreferrer" title="Check out my work on GitHub"><span class="fab fa-github"></span></a></li>
       </ul>
     </div>
   </nav>
