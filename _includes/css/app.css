@@ -107,6 +107,12 @@ footer .nav-item {
   overflow-x: scroll;
 }
 
+@media(min-width: 576px) {
+  .grid-navbar .nav-link {
+    padding: 8px;
+  }
+}
+
 .grid-navbar .navbar-dark .navbar-nav .nav-link {
   margin-right: .5rem;
 }
