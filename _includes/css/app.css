@@ -119,7 +119,7 @@ footer .nav-item {
 
 @media(max-width: 576px) {
   body {
-    padding-top: 5.7rem;
+    padding-top: 5.6rem;
   }
   .grid-navbar {
     grid-template-columns: min-content 1fr;
@@ -135,4 +135,8 @@ footer .nav-item {
   .navbar-dark .grid-navbar .navbar-nav .nav-link {
     margin-right: 1rem;
   }
+}
+
+.social-icon {
+  height: 13.125px;
 }

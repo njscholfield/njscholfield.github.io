@@ -1,0 +1,50 @@
+/* Above the fold */
+body {
+  font-family: 'Open Sans';
+  margin: 0;
+  line-height: 1.5;
+}
+.navbar {
+  font-size: 0.8203125rem;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active, {
+    color: #fff;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 8px 0;
+    display: inline-block;
+}
+.navbar-nav {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.navbar-brand {
+  color: #fff;
+  display: inline-block;
+  padding-top: 0.32421875rem;
+  padding-bottom: 0.32421875rem;
+  margin-right: 1rem;
+  font-size: 1.171875rem;
+  line-height: inherit;
+  white-space: nowrap;
+  text-decoration: none;
+}
+p.lead {
+  font-size: 1.171875rem;
+  font-weight: 300;
+  margin: 0 0 16px 0;
+}
