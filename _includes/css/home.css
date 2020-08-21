@@ -23,6 +23,8 @@
   }
 }
 .jumbotron h1.display-3 {
+  font-size: 4.5rem;
+  line-height: 1.2;
   font-weight: 400;
   text-shadow: none;
   margin: 0 0 8px 0;
@@ -38,7 +40,7 @@
   .display-icon {
     font-size: 8rem;
   }
-  .display-3 {
+  .jumbotron h1.display-3 {
     font-size: 3.5rem;
   }
 }
@@ -46,4 +48,31 @@
   display: flex;
   align-items: center;
   min-height: 11em;
+}
+
+.projects-grid {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 12.5rem;
+  align-items: center;
+}
+.projects-grid svg {
+  grid-column: 2 / 3;
+}
+.projects-grid p {
+  grid-row: 1 / 2;
+}
+
+@media(max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid svg {
+    justify-self: flex-end;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .projects-grid p {
+    grid-row: 2 / 3;
+  }
 }
