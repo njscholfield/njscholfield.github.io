@@ -26,6 +26,7 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
+    text-decoration: none;
     .hashtag {
       text-align: right;
       margin-bottom: 0;
@@ -123,22 +124,22 @@
     color: var(--text);
   }
   #new-tracks {
-    background-color: var(--primary);
+    background-color: var(--bs-primary);
   }
   #conditions {
-    background-color: var(--success);
+    background-color: var(--bs-success);
   }
   #framed {
     background-color: rgba(10,10,10,.8);
   }
   #website {
-    background-color: var(--indigo);
+    background-color: var(--bs-indigo);
   }
   #ssa {
     background-color: #00b4d2;
   }
   #eagle {
-    background-color: var(--danger);
+    background-color: var(--bs-danger);
   }
   #tsdauto {
     background-color: #000080;
