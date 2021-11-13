@@ -103,6 +103,7 @@ footer .nav-item {
 
 .grid-navbar #links {
   justify-content: flex-start;
+  align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
