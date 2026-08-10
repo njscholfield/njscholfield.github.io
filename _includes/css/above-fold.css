@@ -28,6 +28,7 @@ body {
   font-size: 0.8203125rem;
   font-weight: 300;
   padding: 0.5rem 1rem;
+  --bs-navbar-padding-x: 1rem !important;
 }
 .fixed-top {
     position: fixed;
