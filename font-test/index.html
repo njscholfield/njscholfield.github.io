@@ -1,0 +1,161 @@
+---
+title: Font Test
+permalink: /font-test/
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Font probe</title>
+<style>
+  body { margin: 12px; font: 16px/1.35 monospace; color: #000; background: #fff; }
+  h1 { font-size: 20px; margin: 0 0 8px; }
+  pre { white-space: pre-wrap; word-break: break-word; margin: 0; font: inherit; }
+  .sample { font-size: 22px; margin: 4px 0; }
+</style>
+</head>
+<body>
+<h1>Font probe</h1>
+<p class="sample" style="font-family: serif">serif: Hamburgefonstiv 0123</p>
+<p class="sample" style="font-family: sans-serif">sans-serif: Hamburgefonstiv 0123</p>
+<pre id="out">Running…</pre>
+
+<script>
+/*
+ * Reports which local fonts this browser has, and which font the generic
+ * families (serif, sans-serif, monospace) resolve to.
+ *
+ * Results go to three places:
+ *   1. The page itself (visible in the PageSpeed final screenshot).
+ *   2. console.error, one line per finding, prefixed "FONTPROBE". Lighthouse
+ *      lists these under "Browser errors were logged to the console".
+ *   3. Optionally, a POST to the URL given in ?beacon=https://… (text/plain).
+ */
+(async function () {
+  // Each candidate lists the names local() might match: the full font name
+  // first, then PostScript-name variants.
+  const CANDIDATES = [
+    ['Arial', 'ArialMT'],
+    ['Helvetica'],
+    ['Helvetica Neue', 'HelveticaNeue'],
+    ['Times New Roman', 'TimesNewRomanPSMT'],
+    ['Times', 'Times-Roman'],
+    ['Georgia'],
+    ['Verdana'],
+    ['Courier New', 'CourierNewPSMT'],
+    ['Roboto', 'Roboto Regular', 'Roboto-Regular'],
+    ['Noto Sans', 'Noto Sans Regular', 'NotoSans-Regular'],
+    ['Noto Serif', 'Noto Serif Regular', 'NotoSerif-Regular'],
+    ['Liberation Sans', 'Liberation Sans Regular', 'LiberationSans'],
+    ['Liberation Serif', 'Liberation Serif Regular', 'LiberationSerif'],
+    ['Liberation Mono', 'Liberation Mono Regular', 'LiberationMono'],
+    ['Arimo', 'Arimo Regular', 'Arimo-Regular'],
+    ['Tinos', 'Tinos Regular', 'Tinos-Regular'],
+    ['Cousine', 'Cousine Regular', 'Cousine-Regular'],
+    ['DejaVu Sans', 'DejaVuSans'],
+    ['DejaVu Serif', 'DejaVuSerif'],
+    ['DejaVu Sans Mono', 'DejaVuSansMono'],
+    ['Droid Sans', 'DroidSans'],
+    ['Droid Serif', 'DroidSerif'],
+    ['Open Sans', 'Open Sans Regular', 'OpenSans-Regular'],
+    ['Lato', 'Lato Regular', 'Lato-Regular'],
+    ['Ubuntu', 'Ubuntu Regular', 'Ubuntu-Regular'],
+    ['Cantarell', 'Cantarell Regular', 'Cantarell-Regular'],
+    ['FreeSans'],
+    ['FreeSerif'],
+    ['Nimbus Sans', 'Nimbus Sans Regular', 'NimbusSans-Regular', 'Nimbus Sans L'],
+    ['Nimbus Roman', 'Nimbus Roman Regular', 'NimbusRoman-Regular', 'Nimbus Roman No9 L'],
+    ['Carlito'],
+    ['Caladea'],
+    ['Segoe UI', 'SegoeUI'],
+    ['San Francisco', 'SF Pro Text', '.SF NS'],
+  ];
+  const GENERICS = ['serif', 'sans-serif', 'monospace', 'system-ui'];
+  const TEXT = 'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 .,;:!?()';
+
+  const ctx = document.createElement('canvas').getContext('2d');
+  const width = (family) => {
+    ctx.font = '72px ' + family;
+    return ctx.measureText(TEXT).width;
+  };
+  const same = (a, b) => Math.abs(a - b) < 0.05;
+
+  // 1. Which fonts does local() find?
+  const loaded = []; // { name, alias, probe, width }
+  const missing = [];
+  for (let i = 0; i < CANDIDATES.length; i++) {
+    const [name] = CANDIDATES[i];
+    let found = null;
+    for (const alias of CANDIDATES[i]) {
+      const probe = 'probe' + i + '_' + CANDIDATES[i].indexOf(alias);
+      try {
+        const face = await new FontFace(probe, 'local("' + alias + '")').load();
+        document.fonts.add(face);
+        found = { name, alias, probe };
+        break;
+      } catch (e) { /* not installed under this name */ }
+    }
+    if (found) loaded.push(found); else missing.push(name);
+  }
+  loaded.forEach((f) => { f.width = width('"' + f.probe + '"'); });
+
+  // 2. Which names resolve as a plain font-family (the OS may alias a name,
+  //    e.g. Arial -> Liberation Sans, even when local() does not find it)?
+  const baseMono = width('monospace');
+  const baseSerif = width('serif');
+  const byFamilyName = [];
+  for (const [name] of CANDIDATES) {
+    const viaMono = width('"' + name + '", monospace');
+    const viaSerif = width('"' + name + '", serif');
+    if (!same(viaMono, baseMono) || !same(viaSerif, baseSerif)) {
+      const twins = loaded.filter((f) => same(f.width, viaMono)).map((f) => f.name);
+      byFamilyName.push(name + ' (renders as: ' + (twins.join(' / ') || 'unknown') + ')');
+    }
+  }
+
+  // 3. What do the generic families resolve to?
+  const generics = GENERICS.map((g) => {
+    const w = width(g);
+    const twins = loaded.filter((f) => same(f.width, w)).map((f) => f.name);
+    return g + ' = ' + (twins.join(' / ') || 'unknown (not in candidate list)') +
+      ' [' + w.toFixed(1) + 'px]';
+  });
+
+  const lines = [
+    'UA: ' + navigator.userAgent,
+    'Platform: ' + navigator.platform,
+    '',
+    'GENERIC FAMILIES',
+    ...generics.map((g) => '  ' + g),
+    '',
+    'local() FOUND (' + loaded.length + ')',
+    ...loaded.map((f) => '  ' + f.name +
+      (f.alias !== f.name ? ' (as "' + f.alias + '")' : '') +
+      ' [' + f.width.toFixed(1) + 'px]'),
+    '',
+    'RESOLVES BY font-family NAME (' + byFamilyName.length + ')',
+    ...byFamilyName.map((n) => '  ' + n),
+    '',
+    'local() NOT FOUND (' + missing.length + ')',
+    '  ' + missing.join(', '),
+  ];
+  const report = lines.join('\n');
+
+  document.getElementById('out').textContent = report;
+
+  console.error('FONTPROBE local found: ' +
+    (loaded.map((f) => f.alias).join(', ') || 'none'));
+  generics.forEach((g) => console.error('FONTPROBE generic ' + g));
+  console.error('FONTPROBE family-name: ' + (byFamilyName.join('; ') || 'none'));
+  console.error('FONTPROBE UA: ' + navigator.userAgent);
+
+  const beacon = new URLSearchParams(location.search).get('beacon');
+  if (beacon && /^https?:\/\//.test(beacon)) {
+    navigator.sendBeacon(beacon, report);
+  }
+})();
+</script>
+</body>
+</html>
